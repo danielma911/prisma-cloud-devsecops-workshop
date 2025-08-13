@@ -13,8 +13,8 @@ variable "google_credentials" {
 }
 
 provider "google" {
-  project     = "qwiklabs-gcp-03-ef77dfc22296"
-  region      = "us-central1"
+  project = "qwiklabs-gcp-03-ef77dfc22296"
+  region  = "us-central1"
 }
 
 resource "google_storage_bucket" "example" {
@@ -26,7 +26,7 @@ resource "google_storage_bucket" "example" {
   labels = {
     yor_name             = "example"
     yor_trace            = "ef79f2f9-daec-43f0-83eb-c4791a7cb288"
-    git_commit           = "346a7b81609fd766726d3dc5d707950dea20a47a"
+    git_commit           = "eb17b6f0bc65e7263678819559b52ce606075edf"
     git_file             = "code__build__gcs_tf"
     git_last_modified_at = "2025-08-13-01-55-30"
     git_last_modified_by = "52453932danielma911"
