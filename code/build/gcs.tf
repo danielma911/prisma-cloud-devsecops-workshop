@@ -6,11 +6,7 @@ terraform {
     }
   }
 }
-variable "google_credentials" {
-  description = "GCP service account JSON key"
-  type        = string
-  sensitive   = true
-}
+
 
 provider "google" {
   project = "qwiklabs-gcp-03-ef77dfc22296"
