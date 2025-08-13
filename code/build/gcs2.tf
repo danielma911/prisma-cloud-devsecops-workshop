@@ -20,6 +20,10 @@ resource "google_storage_bucket" "example" {
 
   uniform_bucket_level_access = false
 
+  labels = {
+    yor_name  = "example"
+    yor_trace = "5434efdd-7044-4a1a-965f-d05935013689"
+  }
 }
 
 resource "random_id" "rand_suffix" {
