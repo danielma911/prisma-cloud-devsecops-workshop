@@ -21,8 +21,15 @@ resource "google_storage_bucket" "example" {
   uniform_bucket_level_access = false
 
   labels = {
-    yor_name  = "example"
-    yor_trace = "5434efdd-7044-4a1a-965f-d05935013689"
+    yor_name             = "example"
+    yor_trace            = "5434efdd-7044-4a1a-965f-d05935013689"
+    git_commit           = "1577b384758cb1538d20f6d890e89d965c640edc"
+    git_file             = "code__build__gcs2_tf"
+    git_last_modified_at = "2025-08-13-08-15-52"
+    git_last_modified_by = "52453932danielma911"
+    git_modifiers        = "52453932danielma911"
+    git_org              = "danielma911"
+    git_repo             = "prisma-cloud-devsecops-workshop"
   }
 }
 
