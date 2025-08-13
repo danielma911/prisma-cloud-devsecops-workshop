@@ -18,6 +18,10 @@ resource "google_storage_bucket" "example" {
   force_destroy = false
 
   uniform_bucket_level_access = true
+  labels = {
+    yor_name  = "example"
+    yor_trace = "ef79f2f9-daec-43f0-83eb-c4791a7cb288"
+  }
 }
 
 resource "random_id" "rand_suffix" {
