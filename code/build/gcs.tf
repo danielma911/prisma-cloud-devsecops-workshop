@@ -13,8 +13,8 @@ variable "google_credentials" {
 }
 
 provider "google" {
-  project = "qwiklabs-gcp-03-ef77dfc22296"
-  region  = "us-central1"
+  project     = "qwiklabs-gcp-03-ef77dfc22296"
+  region      = "us-central1"
   credentials = var.google_credentials
 }
 
