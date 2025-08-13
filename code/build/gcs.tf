@@ -13,8 +13,8 @@ provider "google" {
 }
 
 resource "google_storage_bucket" "example" {
-  name          = "${var.bucket_name}-${random_id.rand_suffix.hex}"
-  location      = var.location
+  name          = "demo-${random_id.rand_suffix.hex}"
+  location      = "us-central1"
   force_destroy = false
 
   uniform_bucket_level_access = true
