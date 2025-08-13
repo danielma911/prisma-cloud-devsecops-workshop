@@ -9,7 +9,7 @@ terraform {
 
 
 provider "google" {
-  project = {{{project_0.project_id}}}
+  project = "qwiklabs-gcp-03-ef77dfc22296"
   region  = "us-central1"
 }
 
