@@ -33,6 +33,15 @@ resource "google_storage_bucket" "example" {
   }
 }
 
+resource "google_storage_bucket_iam_binding" "public_read" {
+  bucket = google_storage_bucket.example.name
+  role   = "roles/storage.objectViewer"
+
+  members = [
+    "allUsers"
+  ]
+}
+
 resource "random_id" "rand_suffix" {
   byte_length = 4
 }
