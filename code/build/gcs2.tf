@@ -20,16 +20,16 @@ resource "google_storage_bucket" "example" {
 
   iam_binding {
     role    = "roles/storage.objectViewer"
-    members = ["allUsers"]  # Public Read Access
+    members = ["allUsers"] # Public Read Access
   }
   uniform_bucket_level_access = false
 
   labels = {
     yor_name             = "example"
     yor_trace            = "5434efdd-7044-4a1a-965f-d05935013689"
-    git_commit           = "8b993ae363bf58478f1f7a3dbc6b6bb828bf8780"
+    git_commit           = "903cba2d90a05baf32f57b493d1883adc0a210a0"
     git_file             = "code__build__gcs2_tf"
-    git_last_modified_at = "2025-08-13-08-25-38"
+    git_last_modified_at = "2025-08-14-06-18-25"
     git_last_modified_by = "52453932danielma911"
     git_modifiers        = "52453932danielma911"
     git_org              = "danielma911"
