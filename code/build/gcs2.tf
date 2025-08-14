@@ -18,6 +18,10 @@ resource "google_storage_bucket" "example" {
   location      = "us-central1"
   force_destroy = true
 
+  iam_binding {
+    role    = "roles/storage.objectViewer"
+    members = ["allUsers"]  # Public Read Access
+  }
   uniform_bucket_level_access = false
 
   labels = {
