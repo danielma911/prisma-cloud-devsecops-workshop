@@ -1,6 +1,3 @@
-# Define the provider and project/region variables
-provider "google" {}
-
 # Use variables for easy customization
 variable "project_id" {
   description = "The ID of the Google Cloud project."
