@@ -22,7 +22,14 @@ resource "google_storage_bucket" "Example" {
     yor_trace            = "f1afb72e-2fec-49e9-bd3f-03fef6f3075a"
   }
 }
+resource "google_storage_bucket_iam_binding" "public_read" {
+  bucket = google_storage_bucket.Example.name
+  role   = "roles/storage.objectViewer"
 
+  members = [
+    "allUsers"
+  ]
+}
 resource "random_id" "Rand_suffix" {
   byte_length = 4
 }
