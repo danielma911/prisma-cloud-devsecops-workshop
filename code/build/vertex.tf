@@ -21,11 +21,11 @@ variable "instance_name" {
 # The correct resource name is google_notebooks_instance.
 resource "google_notebooks_instance" "default" {
   # The name of the instance.
-  name     = var.instance_name
+  name = var.instance_name
   # The location (region) where the instance will be deployed.
   location = var.region
   # The project ID where the instance will be created.
-  project  = var.project_id
+  project = var.project_id
 
   # Specify the machine type for the instance.
   # This example uses a standard machine type.
@@ -55,6 +55,17 @@ resource "google_notebooks_instance" "default" {
   # By NOT including 'network' and 'subnet' blocks, the instance is
   # automatically configured to use a public IP address for accessibility,
   # fulfilling the "not private" requirement.
+  labels = {
+    git_commit           = "a2b352f95b0e1c8c623d20890906334ed3e80986"
+    git_file             = "code__build__vertex_tf"
+    git_last_modified_at = "2025-08-18-08-06-29"
+    git_last_modified_by = "52453932danielma911"
+    git_modifiers        = "52453932danielma911"
+    git_org              = "danielma911"
+    git_repo             = "prisma-cloud-devsecops-workshop"
+    yor_name             = "default"
+    yor_trace            = "281498c5-c2f7-4f70-8c84-b1cd10169f93"
+  }
 }
 
 # Optional: Define an output to easily retrieve the instance name after creation
