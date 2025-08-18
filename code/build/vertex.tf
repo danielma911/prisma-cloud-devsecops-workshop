@@ -18,7 +18,8 @@ variable "instance_name" {
 }
 
 # Create the Vertex AI Notebooks Instance
-resource "google_vertex_ai_notebooks_instance" "default" {
+# The correct resource name is google_notebooks_instance.
+resource "google_notebooks_instance" "default" {
   # The name of the instance.
   name     = var.instance_name
   # The location (region) where the instance will be deployed.
@@ -40,12 +41,13 @@ resource "google_vertex_ai_notebooks_instance" "default" {
   }
 
   # Add a boot disk configuration
-  boot_disk {
-    disk_size_gb = 100
-    disk_type    = "PD_SSD"
-  }
-
-  # Set a custom shield configuration to disable vTPM for performance
+  #boot_disk {
+  #  disk_size_gb = 100
+  #  disk_type    = "PD_SSD"
+  #}
+  boot_disk_size_gb = 100
+  boot_disk_type    = "PD_SSD"
+  # Set a custom shielded instance configuration
   shielded_instance_config {
     enable_vtpm = false
   }
@@ -57,5 +59,5 @@ resource "google_vertex_ai_notebooks_instance" "default" {
 
 # Optional: Define an output to easily retrieve the instance name after creation
 output "instance_name" {
-  value = google_vertex_ai_notebooks_instance.default.name
+  value = google_notebooks_instance.default.name
 }
