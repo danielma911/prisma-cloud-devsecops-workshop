@@ -3,7 +3,7 @@ provider "google" {
   region  = "us-central1"
 }
 
-resource "google_storage_bucket" "Example" {
+resource "google_storage_bucket" "sample" {
   name          = "demo2-${random_id.Rand_suffix.hex}"
   location      = "us-central1"
   force_destroy = true
@@ -28,7 +28,7 @@ resource "random_id" "Rand_suffix" {
 }
 
 resource "google_storage_bucket_iam_binding" "public_read" {
-  bucket = google_storage_bucket.Example.name
+  bucket = google_storage_bucket.sample.name
   role   = "roles/storage.objectViewer"
 
   members = [
@@ -37,5 +37,5 @@ resource "google_storage_bucket_iam_binding" "public_read" {
 }
 
 output "Bucket_name" {
-  value = google_storage_bucket.Example.name
+  value = google_storage_bucket.sample.name
 }
