@@ -23,7 +23,7 @@ resource "google_notebooks_instance" "default" {
   # The name of the instance.
   name = var.instance_name
   # The location (region) where the instance will be deployed.
-  location = "us-central1a"
+  location = "us-central1-a"
   # The project ID where the instance will be created.
   project = var.project_id
 
