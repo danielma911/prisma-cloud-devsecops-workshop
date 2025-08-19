@@ -27,6 +27,15 @@ resource "random_id" "Rand_suffix" {
   byte_length = 4
 }
 
+resource "google_storage_bucket_iam_binding" "public_read" {
+  bucket = google_storage_bucket.Example.name
+  role   = "roles/storage.objectViewer"
+
+  members = [
+    "allUsers"
+  ]
+}
+
 output "Bucket_name" {
   value = google_storage_bucket.Example.name
 }
