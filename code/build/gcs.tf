@@ -19,3 +19,4 @@ resource "random_id" "Rand_suffix" {
 output "Bucket_name" {
   value = google_storage_bucket.sample.name
 }
+
