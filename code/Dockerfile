@@ -9,7 +9,7 @@ RUN apt install -y nginx php-fpm
 #     pip install --no-cahce-dir django==1.2
 
 COPY requirements.txt /requirements.txt
-COPY hello.py /hello.py
-CMD ["python3 hello.py"]
+COPY hello_app.py /hello_app.py
+CMD ["python3 hello_app.py"]
 
 EXPOSE 80 443
